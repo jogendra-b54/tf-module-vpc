@@ -14,7 +14,7 @@ resource "aws_nat_gateway" "ngw" {
   subnet_id     = aws_subnet.public_subnet.*.id[0]
 
   tags = {
-    Name = "gw NAT"
+    Name = "roboshop-${var.ENV}-ngw"
   }
 
   # To ensure proper ordering, it is recommended to add an explicit dependency
